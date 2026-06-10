@@ -1,0 +1,20 @@
+{
+  "name": "Om's HEB Shift Helper",
+  "short_name": "HEB Helper",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d62828",
+  "icons": [
+    {
+      "src": "rocket.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "rocket.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
