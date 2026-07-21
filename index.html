@@ -1,37 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <link rel="icon" href="rocket.jpg">
     <link rel="apple-touch-icon" href="rocket.jpg">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="HEB Shift Helper">
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Om's HEB Shift Helper</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <div class="container">
-        <h1>Om's HEB Shift Helper</h1>
 
-        <label for="dayType">Day Type</label>
-        <select id="dayType">
-            <option value="">Select Day Type</option>
-            <option value="weekday">Monday - Friday</option>
-            <option value="weekend">Saturday - Sunday</option>
-        </select>
+<div class="container">
 
-        <label for="shift">Shift</label>
-        <select id="shift">
-            <option value="">Select Shift</option>
-        </select>
+    <h1>Om's HEB Shift Helper</h1>
 
-        <div id="schedule"></div>
-    </div>
 
-    <script src="script.js"></script>
+    <label>Select Shift</label>
+
+    <select id="shift">
+
+        <option value="">
+            Select Shift
+        </option>
+
+        <option value="Opener">
+            Opener
+        </option>
+
+        <option value="Mid Shift">
+            Mid Shift
+        </option>
+
+        <option value="Closing Shift">
+            Closing Shift
+        </option>
+
+    </select>
+
+
+    <div id="schedule"></div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
