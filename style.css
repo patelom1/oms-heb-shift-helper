@@ -1,33 +1,22 @@
 body {
 
     font-family: Arial, sans-serif;
-
     background:#f4f4f4;
-
     margin:0;
-
     padding:20px;
 
 }
-
 
 
 .container {
 
-
     max-width:700px;
-
     margin:auto;
-
     background:white;
-
     padding:20px;
-
     border-radius:12px;
 
-
 }
-
 
 
 h1 {
@@ -37,117 +26,84 @@ h1 {
 }
 
 
+#clock {
+
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:15px;
+
+}
+
 
 label {
 
     display:block;
-
     font-weight:bold;
-
     margin-top:15px;
 
 }
 
 
-
 select {
 
-
     width:100%;
-
     padding:12px;
-
-    margin-top:8px;
-
     font-size:16px;
 
-
 }
-
 
 
 .task {
 
-
     padding:12px;
-
     margin:10px 0;
-
     background:#eef3ff;
-
     border-left:5px solid #3366ff;
-
     border-radius:8px;
 
-
 }
-
 
 
 .task small {
 
-
     display:block;
-
     margin-top:5px;
-
     color:#555;
 
-
 }
-
 
 
 .completed {
 
-
-    opacity:.45;
-
+    opacity:0.45;
 
 }
-
 
 
 .current {
 
-
     background:#e6ffe6;
-
     border-left:5px solid green;
 
-
 }
-
 
 
 .current:before {
 
-
     content:"CURRENT TASK";
-
     display:block;
-
-    font-size:12px;
-
-    font-weight:bold;
-
     color:green;
-
+    font-size:12px;
+    font-weight:bold;
 
 }
 
 
-
 .notes {
 
-
     margin-top:20px;
-
     padding:15px;
-
     background:#fff3cd;
-
     border-radius:8px;
-
 
 }
