@@ -205,9 +205,9 @@ const tasks = schedules[shift.value];
 
 if(!tasks){
 
-scheduleDiv.innerHTML="";
+    scheduleDiv.innerHTML="";
 
-return;
+    return;
 
 }
 
