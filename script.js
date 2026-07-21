@@ -1,122 +1,217 @@
 const schedules = {
-    weekday: {
-        "7-330": [
-            "7:00-8:00 MSR",
-            "8:00-9:00 Returns Service",
-            "9:00-9:15 Break",
-            "9:15-10:15 Produce",
-            "10:15-11:15 Returns Curbside",
-            "11:15-11:45 Lunch",
-            "11:45-1:00 Returns Service / Service Return Basket",
-            "1:00-1:15 Milk Bottles",
-            "1:15-1:30 Break",
-            "1:30-3:30 Midday"
-        ],
 
-        "1230-9": [
-            "12:30-1:30 Curbside Cold Returns",
-            "1:30-3:30 Midday",
-            "3:30-3:45 Break",
-            "3:45-4:15 MSR",
-            "4:15-5:45 Wareroom Returns / Service Return Basket",
-            "5:45-6:15 Lunch",
-            "6:15-6:30 Milk Bottles",
-            "6:30-7:30 Curbside Returns",
-            "7:30-7:45 Break",
-            "7:45-8:15 Service Returns",
-            "8:15-9:00 Orphans & Cardboard"
-        ],
+    "Opener": [
+        {
+            time: "7:00 AM",
+            task: "MSR",
+            note: "1 Partner GM / 1 Partner Grocery"
+        },
+        {
+            time: "8:00 AM",
+            task: "Returns",
+            note: "1 Partner Curbside / 1 Partner Service"
+        },
+        {
+            time: "9:00 AM",
+            task: "Break"
+        },
+        {
+            time: "9:15 AM",
+            task: "Produce Stocking"
+        },
+        {
+            time: "10:30 AM",
+            task: "Floor Walk (Fresh)"
+        },
+        {
+            time: "11:00 AM",
+            task: "Lunch"
+        },
+        {
+            time: "11:30 AM",
+            task: "MSR",
+            note: "1 Partner GM / 1 Partner Grocery"
+        },
+        {
+            time: "12:15 PM",
+            task: "Returns",
+            note: "1 Partner Curbside / 1 Partner Service"
+        },
+        {
+            time: "12:45 PM",
+            task: "Break"
+        },
+        {
+            time: "1:00 PM",
+            task: "Midday"
+        },
+        {
+            time: "3:00 PM",
+            task: "Returns",
+            note: "1 Partner Curbside / 1 Partner Service"
+        }
+    ],
 
-        "130-10": [
-            "1:30-3:30 Midday",
-            "3:30-3:45 Milk Bottles",
-            "3:45-4:00 Break",
-            "4:00-4:45 Produce",
-            "4:45-6:15 Returns",
-            "6:15-6:45 Lunch",
-            "6:45-7:15 MSR",
-            "7:15-8:15 Service Returns / Basket",
-            "8:15-8:30 Break",
-            "8:30-9:45 Returns and Receiving",
-            "9:45-10:00 Milk Bottles"
-        ]
-    },
 
-    weekend: {
-        "8-430": [
-            "8:00-9:15 Curbside Returns",
-            "9:15-10:15 Wareroom Returns",
-            "10:15-10:30 Break",
-            "10:30-11:30 Produce",
-            "11:30-1:00 Service Returns",
-            "1:00-1:30 Lunch",
-            "1:30-2:30 Midday",
-            "2:30-2:45 Break",
-            "2:45-4:30 Market"
-        ],
+    "Mid Shift": [
+        {
+            time: "11:00 AM",
+            task: "Returns"
+        },
+        {
+            time: "12:30 PM",
+            task: "Break"
+        },
+        {
+            time: "12:45 PM",
+            task: "Register Check"
+        },
+        {
+            time: "1:00 PM",
+            task: "Midday"
+        },
+        {
+            time: "3:00 PM",
+            task: "Lunch"
+        },
+        {
+            time: "3:30 PM",
+            task: "Returns"
+        },
+        {
+            time: "4:00 PM",
+            task: "MSR"
+        },
+        {
+            time: "5:00 PM",
+            task: "Floor Walk (Center)"
+        },
+        {
+            time: "5:30 PM",
+            task: "Returns"
+        },
+        {
+            time: "6:30 PM",
+            task: "Break"
+        },
+        {
+            time: "6:45 PM",
+            task: "Curbside & Fresh Returns"
+        }
+    ],
 
-        "1230-9": [
-            "12:30-1:30 Curbside Cold Returns",
-            "1:30-3:30 Midday",
-            "3:30-3:45 Break",
-            "3:45-4:45 MSR",
-            "4:45-5:45 Wareroom Returns",
-            "5:45-6:15 Lunch",
-            "6:15-6:30 Milk Bottles",
-            "6:30-7:30 Curbside Returns",
-            "7:30-7:45 Break",
-            "7:45-8:15 Service Returns",
-            "8:15-9:00 Orphans & Cardboard"
-        ],
 
-        "130-10": [
-            "1:30-3:30 Midday",
-            "3:30-3:45 Milk Bottles",
-            "3:45-4:00 Break",
-            "4:00-4:45 Produce",
-            "4:45-6:15 Returns and Receiving",
-            "6:15-6:45 Lunch",
-            "6:45-7:15 MSR",
-            "7:15-8:15 Service Returns",
-            "8:15-8:30 Break",
-            "8:30-9:45 Returns and Receiving",
-            "9:45-10:00 Milk Bottles / Return Pickup"
-        ]
-    }
+    "Closing Shift": [
+        {
+            time: "1:00 PM",
+            task: "Midday"
+        },
+        {
+            time: "3:00 PM",
+            task: "Break"
+        },
+        {
+            time: "3:15 PM",
+            task: "Register Check / Returns"
+        },
+        {
+            time: "4:00 PM",
+            task: "Floor Walk (Center)"
+        },
+        {
+            time: "4:30 PM",
+            task: "Returns"
+        },
+        {
+            time: "5:30 PM",
+            task: "Lunch"
+        },
+        {
+            time: "6:00 PM",
+            task: "Returns"
+        },
+        {
+            time: "7:00 PM",
+            task: "MSR"
+        },
+        {
+            time: "8:00 PM",
+            task: "Break"
+        },
+        {
+            time: "8:15 PM",
+            task: "Floor Walk (Center)"
+        },
+        {
+            time: "8:45 PM",
+            task: "Returns / Lead Checklist"
+        }
+    ]
+
 };
 
-const dayType = document.getElementById("dayType");
+
 const shift = document.getElementById("shift");
 const scheduleDiv = document.getElementById("schedule");
 
-dayType.addEventListener("change", () => {
-    shift.innerHTML = '<option value="">Select Shift</option>';
 
-    if (dayType.value === "weekday") {
-        shift.innerHTML += `
-            <option value="7-330">7:00 AM - 3:30 PM</option>
-            <option value="1230-9">12:30 PM - 9:00 PM</option>
-            <option value="130-10">1:30 PM - 10:00 PM</option>
-        `;
-    }
+// Load shifts automatically
+Object.keys(schedules).forEach(shiftName => {
 
-    if (dayType.value === "weekend") {
-        shift.innerHTML += `
-            <option value="8-430">8:00 AM - 4:30 PM</option>
-            <option value="1230-9">12:30 PM - 9:00 PM</option>
-            <option value="130-10">1:30 PM - 10:00 PM</option>
-        `;
-    }
+    shift.innerHTML += `
+        <option value="${shiftName}">
+            ${shiftName}
+        </option>
+    `;
 
-    scheduleDiv.innerHTML = "";
 });
 
+
 shift.addEventListener("change", () => {
-    const tasks = schedules[dayType.value]?.[shift.value];
+
+    const tasks = schedules[shift.value];
 
     if (!tasks) return;
 
+
     scheduleDiv.innerHTML =
-        "<h2>Today's Tasks</h2>" +
-        tasks.map(task => `<div class="task">${task}</div>`).join("");
+    `
+    <h2>${shift.value}</h2>
+
+    ${
+        tasks.map(item =>
+
+        `
+        <div class="task">
+
+            <strong>${item.time}</strong>
+            <br>
+
+            ${item.task}
+
+            ${
+                item.note 
+                ? `<small>${item.note}</small>`
+                : ""
+            }
+
+        </div>
+        `
+
+        ).join("")
+    }
+
+
+    <div class="notes">
+
+    <h3>Notes</h3>
+
+    <p>* MSR = 1 Partner GM / 1 Partner Grocery</p>
+
+    <p>** Returns = 1 Partner Curbside / 1 Partner Service</p>
+
+    </div>
+
+    `;
+
 });
